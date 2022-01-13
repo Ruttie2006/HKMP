@@ -46,7 +46,7 @@ namespace Hkmp.Networking {
          * Starts the server on the given port
          */
         public void Start(int port) {
-            Logger.Get().Info(this, $"Starting NetServer on port {port}");
+            Logger.Log.Info(this, $"Starting NetServer on port {port}");
             IsStarted = true;
 
             // Initialize the UDP client on the given port
@@ -67,7 +67,7 @@ namespace Hkmp.Networking {
             try {
                 receivedData = _udpClient.EndReceive(result, ref endPoint);
             } catch (Exception e) {
-                Logger.Get().Warn(this, $"UDP EndReceive exception: {e.GetType()}, message: {e.Message}");
+                Logger.Log.Warn(this, $"UDP EndReceive exception: {e.GetType()}, message: {e.Message}");
                 // Return if an exception was caught, since there's no need to handle the packets then
                 return;
             } finally {
@@ -79,7 +79,7 @@ namespace Hkmp.Networking {
                         _udpClient.BeginReceive(OnUdpReceive, null);
                         break;
                     } catch (Exception e) {
-                        Logger.Get().Warn(this, $"UDP BeginReceive exception: {e.GetType()}, message: {e.Message}");
+                        Logger.Log.Warn(this, $"UDP BeginReceive exception: {e.GetType()}, message: {e.Message}");
                     }
 
                     tries--;
@@ -87,7 +87,7 @@ namespace Hkmp.Networking {
 
                 // If we ran out of tries while starting the UDP receive again, we stop the server entirely
                 if (tries == 0) {
-                    Logger.Get().Warn(this, "Could not successfully call BeginReceive, stopping server");
+                    Logger.Log.Warn(this, "Could not successfully call BeginReceive, stopping server");
                     Stop();
                 }
             }
@@ -114,7 +114,7 @@ namespace Hkmp.Networking {
                 }
             }
 
-            Logger.Get().Info(this,
+            Logger.Log.Info(this,
                 $"Received packet from unknown client with address: {endPoint.Address}:{endPoint.Port}, creating new client");
 
             // We didn't find a client with the given address, so we assume it is a new client
@@ -154,7 +154,7 @@ namespace Hkmp.Networking {
             client.Disconnect();
             _clients.Remove(client);
 
-            Logger.Get().Info(this, $"Client {id} timed out");
+            Logger.Log.Info(this, $"Client {id} timed out");
         }
 
         private void HandlePacketsRegisteredClient(NetServerClient client, List<Packet.Packet> packets) {
@@ -197,10 +197,10 @@ namespace Hkmp.Networking {
 
                 var loginRequest = (LoginRequest) packetData;
 
-                Logger.Get().Info(this, $"Received login request from '{loginRequest.Username}'");
+                Logger.Log.Info(this, $"Received login request from '{loginRequest.Username}'");
                 
                 // For now we accept every client, but this could change if whitelisting/max capacity is implemented
-                Logger.Get().Info(this, $"Login request from '{loginRequest.Username}' approved");
+                Logger.Log.Info(this, $"Login request from '{loginRequest.Username}' approved");
                 client.UpdateManager.SetLoginResponseData(LoginResponseStatus.Success);
                 
                 // Register the client, which assigns an ID and add them to the dictionary
@@ -244,7 +244,7 @@ namespace Hkmp.Networking {
 
         public void OnClientDisconnect(ushort id) {
             if (!_registeredClients.TryGetValue(id, out var client)) {
-                Logger.Get().Warn(this, $"Handling disconnect from ID {id}, but there's no matching client");
+                Logger.Log.Warn(this, $"Handling disconnect from ID {id}, but there's no matching client");
                 return;
             }
 
@@ -252,7 +252,7 @@ namespace Hkmp.Networking {
             _registeredClients.Remove(id);
             _clients.Remove(client);
 
-            Logger.Get().Info(this, $"Client {id} disconnected");
+            Logger.Log.Info(this, $"Client {id} disconnected");
         }
 
         public ServerUpdateManager GetUpdateManagerForClient(ushort id) {

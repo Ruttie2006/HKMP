@@ -25,12 +25,13 @@ namespace HKMPServer.HKM
             }
             catch (Exception ex)
             {
-                Logger.Get().Error(this, ex.ToString());
+                Logger.Log.Error(this, ex.ToString());
             }
         }
         public async void OnReceived(IAsyncResult res) =>
             await HandleReceived(Listener.EndGetContext(res));
-        
+
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task HandleReceived(HttpListenerContext context)
         {
             try
@@ -63,8 +64,9 @@ namespace HKMPServer.HKM
             }
             catch (Exception ex)
             {
-                Logger.Get().Error(this, ex.ToString());
+                Logger.Log.Error(this, ex.ToString());
             }
         }
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
     }
 }

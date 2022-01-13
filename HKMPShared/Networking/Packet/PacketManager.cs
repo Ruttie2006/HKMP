@@ -57,7 +57,7 @@ namespace Hkmp.Networking.Packet {
          */
         private void ExecuteServerPacketHandler(ushort id, ServerPacketId packetId, IPacketData packetData) {
             if (!_serverPacketHandlers.ContainsKey(packetId)) {
-                Logger.Get().Warn(this, $"There is no server packet handler registered for ID: {packetId}");
+                Logger.Log.Warn(this, $"There is no server packet handler registered for ID: {packetId}");
                 return;
             }
 
@@ -67,7 +67,7 @@ namespace Hkmp.Networking.Packet {
             try {
                 _serverPacketHandlers[packetId].Invoke(id, packetData);
             } catch (Exception e) {
-                Logger.Get().Error(this,
+                Logger.Log.Error(this,
                     $"Exception occured while executing server packet handler for packet ID: {packetId}, message: {e.Message}, stacktrace: {e.StackTrace}");
             }
         }
@@ -75,7 +75,7 @@ namespace Hkmp.Networking.Packet {
         public void RegisterClientPacketHandler<T>(ClientPacketId packetId, GenericClientPacketHandler<T> packetHandler)
             where T : IPacketData {
             if (_clientPacketHandlers.ContainsKey(packetId)) {
-                Logger.Get().Error(this, $"Tried to register already existing client packet handler: {packetId}");
+                Logger.Log.Error(this, $"Tried to register already existing client packet handler: {packetId}");
                 return;
             }
 
@@ -86,7 +86,7 @@ namespace Hkmp.Networking.Packet {
 
         public void RegisterClientPacketHandler(ClientPacketId packetId, Action handler) {
             if (_clientPacketHandlers.ContainsKey(packetId)) {
-                Logger.Get().Error(this, $"Tried to register already existing client packet handler: {packetId}");
+                Logger.Log.Error(this, $"Tried to register already existing client packet handler: {packetId}");
                 return;
             }
 
@@ -95,7 +95,7 @@ namespace Hkmp.Networking.Packet {
 
         public void DeregisterClientPacketHandler(ClientPacketId packetId) {
             if (!_clientPacketHandlers.ContainsKey(packetId)) {
-                Logger.Get().Error(this, $"Tried to remove non-existent client packet handler: {packetId}");
+                Logger.Log.Error(this, $"Tried to remove non-existent client packet handler: {packetId}");
                 return;
             }
 
@@ -105,7 +105,7 @@ namespace Hkmp.Networking.Packet {
         public void RegisterServerPacketHandler<T>(ServerPacketId packetId, GenericServerPacketHandler<T> packetHandler)
             where T : IPacketData {
             if (_serverPacketHandlers.ContainsKey(packetId)) {
-                Logger.Get().Error(this, $"Tried to register already existing server packet handler: {packetId}");
+                Logger.Log.Error(this, $"Tried to register already existing server packet handler: {packetId}");
                 return;
             }
 
@@ -116,7 +116,7 @@ namespace Hkmp.Networking.Packet {
 
         public void RegisterServerPacketHandler(ServerPacketId packetId, EmptyServerPacketHandler handler) {
             if (_serverPacketHandlers.ContainsKey(packetId)) {
-                Logger.Get().Error(this, $"Tried to register already existing client packet handler: {packetId}");
+                Logger.Log.Error(this, $"Tried to register already existing client packet handler: {packetId}");
                 return;
             }
 
@@ -125,7 +125,7 @@ namespace Hkmp.Networking.Packet {
 
         public void DeregisterServerPacketHandler(ServerPacketId packetId) {
             if (!_serverPacketHandlers.ContainsKey(packetId)) {
-                Logger.Get().Error(this, $"Tried to remove non-existent server packet handler: {packetId}");
+                Logger.Log.Error(this, $"Tried to remove non-existent server packet handler: {packetId}");
                 return;
             }
 

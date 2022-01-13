@@ -235,7 +235,7 @@ namespace Hkmp.Networking.Packet {
                     continue;
                 }
 
-                Logger.Get().Info(this, $"  Resending {packetData.GetType()} data");
+                Logger.Log.Info(this, $"  Resending {packetData.GetType()} data");
                 toResendPacketData[packetId] = packetData;
             }
 
@@ -317,7 +317,7 @@ namespace Hkmp.Networking.Packet {
             foreach (var resendSequence in new List<ushort>(_resendPacketData.Keys)) {
                 if (receivedSequenceNumbers.Contains(resendSequence)) {
                     // TODO: remove this output
-                    Logger.Get().Info(this, "Dropping resent data due to duplication");
+                    Logger.Log.Info(this, "Dropping resent data due to duplication");
                     _resendPacketData.Remove(resendSequence);
                 }
             }
