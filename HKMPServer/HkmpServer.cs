@@ -69,7 +69,14 @@ namespace HkmpServer {
             var serverManager = new ServerManager(netServer, gameSettings, packetManager);
 
             new CommandManager(gameSettings, serverManager);
-            new HKMInteraction(ref serverManager);
+            try
+            {
+                new HKMInteraction(ref serverManager);
+            }
+            catch (Exception ex)
+            {
+                Logger.Get().Error(this, ex.ToString());
+            }
             serverManager.Start(port);
         }
 
