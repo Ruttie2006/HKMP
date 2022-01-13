@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using Hkmp;
 using Hkmp.Game.Server;
 using Hkmp.Game.Settings;
 using Hkmp.Networking;
 using Hkmp.Networking.Packet;
+using HKMPServer.HKM;
 using Version = Hkmp.Version;
 
 namespace HkmpServer {
@@ -68,7 +69,7 @@ namespace HkmpServer {
             var serverManager = new ServerManager(netServer, gameSettings, packetManager);
 
             new CommandManager(gameSettings, serverManager);
-
+            new HKMInteraction(ref serverManager);
             serverManager.Start(port);
         }
 
