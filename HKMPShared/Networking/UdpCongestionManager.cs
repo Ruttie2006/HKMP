@@ -124,7 +124,7 @@ namespace Hkmp {
                 // we can go back to high send rates
                 if (_belowThresholdStopwatch.IsRunning
                     && _belowThresholdStopwatch.ElapsedMilliseconds > _currentSwitchTimeThreshold) {
-                    Logger.Get().Info(this, "Switched to non-congested send rates");
+                    Logger.Log.Info(this, "Switched to non-congested send rates");
 
                     _isChannelCongested = false;
 
@@ -151,7 +151,7 @@ namespace Hkmp {
                     _currentSwitchTimeThreshold =
                         System.Math.Max(_currentSwitchTimeThreshold / 2, MinimumSwitchThreshold);
 
-                    Logger.Get().Info(this,
+                    Logger.Log.Info(this,
                         $"Proper time spent in non-congested mode, halved switch threshold to: {_currentSwitchTimeThreshold}");
 
                     // After we reach the minimum threshold, there's no reason to keep the stopwatch going
@@ -163,7 +163,7 @@ namespace Hkmp {
                 // If the channel was not previously congested, but our average round trip time
                 // exceeds the threshold, we switch to congestion values
                 if (AverageRtt > CongestionThreshold) {
-                    Logger.Get().Info(this, "Switched to congested send rates");
+                    Logger.Log.Info(this, "Switched to congested send rates");
 
                     _isChannelCongested = true;
 
@@ -176,7 +176,7 @@ namespace Hkmp {
                         _currentSwitchTimeThreshold =
                             System.Math.Min(_currentSwitchTimeThreshold * 2, MaximumSwitchThreshold);
 
-                        Logger.Get().Info(this,
+                        Logger.Log.Info(this,
                             $"Too little time spent in non-congested mode, doubled switch threshold to: {_currentSwitchTimeThreshold}");
                     }
 
@@ -197,13 +197,13 @@ namespace Hkmp {
                     _sentQueue.Remove(seqSentPacketPair.Key);
 
                     // TODO: remove this output
-                    // Logger.Get().Info(this,
+                    // Logger.Log.Info(this,
                     //     $"Packet ack of seq: {seqSentPacketPair.Key} exceeded maximum RTT, assuming lost");
 
                     // Check if this packet contained information that needed to be reliable
                     // and if so, resend the data by adding it to the current packet
                     if (sentPacket.Packet.ContainsReliableData()) {
-                        Logger.Get().Info(
+                        Logger.Log.Info(
                             this, 
                             $"Packet ack of seq: {seqSentPacketPair.Key} with reliable data exceeded maximum RTT, assuming lost, resending data"
                         );

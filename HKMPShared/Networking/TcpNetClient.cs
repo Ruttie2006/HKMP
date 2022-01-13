@@ -31,11 +31,11 @@ namespace Hkmp {
                 SendBufferSize = MaxBufferSize,
             };
 
-            Logger.Get().Info(this, "TCP Begin Connect");
+            Logger.Log.Info(this, "TCP Begin Connect");
             try {
                 _tcpClient.BeginConnect(host, port, OnConnect, _tcpClient);
             } catch (Exception e) {
-                Logger.Get().Error(this, $"TCP connection failed, exception: {e.Message}");
+                Logger.Log.Error(this, $"TCP connection failed, exception: {e.Message}");
 
                 _onConnectFailed?.Invoke();
             }
@@ -61,14 +61,14 @@ namespace Hkmp {
                 try {
                     _tcpClient.EndConnect(result);
                 } catch (Exception e) {
-                    Logger.Get().Info(this, $"Connection failed: {e.Message}");
+                    Logger.Log.Info(this, $"Connection failed: {e.Message}");
                     // Invoke callback if it exists
                     _onConnectFailed?.Invoke();
 
                     return;
                 }
             } else {
-                Logger.Get().Warn(this, "Result in OnConnect is null");
+                Logger.Log.Warn(this, "Result in OnConnect is null");
                 // This probably means that the connection failed, so invoke the callback
                 _onConnectFailed?.Invoke();
                 return;
@@ -79,11 +79,11 @@ namespace Hkmp {
 
         private void FinishConnectionSetup() {
             if (!_tcpClient.Connected) {
-                Logger.Get().Error(this, "Connection failed in FinishConnectionSetup, this shouldn't happen");
+                Logger.Log.Error(this, "Connection failed in FinishConnectionSetup, this shouldn't happen");
                 return;
             }
 
-            Logger.Get().Info(this, "Connection success");
+            Logger.Log.Info(this, "Connection success");
 
             // Invoke callback if it exists
             _onConnect?.Invoke();
@@ -94,7 +94,7 @@ namespace Hkmp {
          */
         public void Disconnect() {
             if (!_tcpClient.Connected) {
-                Logger.Get().Warn(this, "TCP client was not connected, trying to close anyway");
+                Logger.Log.Warn(this, "TCP client was not connected, trying to close anyway");
             }
 
             _tcpClient.Close();

@@ -58,7 +58,7 @@ namespace Hkmp.Game.Server {
         public void Start(int port) {
             // Stop existing server
             if (_netServer.IsStarted) {
-                Logger.Get().Warn(this, "Server was running, shutting it down before starting");
+                Logger.Log.Warn(this, "Server was running, shutting it down before starting");
                 _netServer.Stop();
             }
 
@@ -77,7 +77,7 @@ namespace Hkmp.Game.Server {
 
                 _netServer.Stop();
             } else {
-                Logger.Get().Warn(this, "Could not stop server, it was not started");
+                Logger.Log.Warn(this, "Could not stop server, it was not started");
             }
         }
 
@@ -108,7 +108,7 @@ namespace Hkmp.Game.Server {
         }
 
         private void OnHelloServer(ushort id, HelloServer helloServer) {
-            Logger.Get().Info(this, $"Received HelloServer data from ID {id}");
+            Logger.Log.Info(this, $"Received HelloServer data from ID {id}");
 
             // Start by sending the new client the current Server Settings
             _netServer.GetUpdateManagerForClient(id)?.UpdateGameSettings(_gameSettings);
@@ -140,13 +140,13 @@ namespace Hkmp.Game.Server {
 
         private void OnClientEnterScene(ushort id, ServerPlayerEnterScene playerEnterScene) {
             if (!_playerData.TryGetValue(id, out var playerData)) {
-                Logger.Get().Warn(this, $"Received EnterScene data from {id}, but player is not in mapping");
+                Logger.Log.Warn(this, $"Received EnterScene data from {id}, but player is not in mapping");
                 return;
             }
 
             var newSceneName = playerEnterScene.NewSceneName;
 
-            Logger.Get().Info(this, $"Received EnterScene data from ID {id}, new scene: {newSceneName}");
+            Logger.Log.Info(this, $"Received EnterScene data from ID {id}, new scene: {newSceneName}");
 
             // Store it in their PlayerData object
             playerData.CurrentScene = newSceneName;
@@ -172,7 +172,7 @@ namespace Hkmp.Game.Server {
                 // Send the packet to all clients on the new scene
                 // to indicate that this client has entered their scene
                 if (otherPlayerData.CurrentScene.Equals(playerData.CurrentScene)) {
-                    Logger.Get().Info(this, $"Sending EnterScene data to {idPlayerDataPair.Key}");
+                    Logger.Log.Info(this, $"Sending EnterScene data to {idPlayerDataPair.Key}");
 
                     _netServer.GetUpdateManagerForClient(idPlayerDataPair.Key)?.AddPlayerEnterSceneData(
                         id,
@@ -184,7 +184,7 @@ namespace Hkmp.Game.Server {
                         playerData.LastAnimationClip
                     );
 
-                    Logger.Get().Info(this, $"Sending that {idPlayerDataPair.Key} is already in scene to {id}");
+                    Logger.Log.Info(this, $"Sending that {idPlayerDataPair.Key} is already in scene to {id}");
 
                     alreadyPlayersInScene = true;
 
@@ -210,19 +210,19 @@ namespace Hkmp.Game.Server {
 
         private void OnClientLeaveScene(ushort id) {
             if (!_playerData.TryGetValue(id, out var playerData)) {
-                Logger.Get().Warn(this, $"Received LeaveScene data from {id}, but player is not in mapping");
+                Logger.Log.Warn(this, $"Received LeaveScene data from {id}, but player is not in mapping");
                 return;
             }
 
             var sceneName = playerData.CurrentScene;
 
             if (sceneName.Length == 0) {
-                Logger.Get().Info(this,
+                Logger.Log.Info(this,
                     $"Received LeaveScene data from ID {id}, but there was no last scene registered");
                 return;
             }
 
-            Logger.Get().Info(this, $"Received LeaveScene data from ID {id}, last scene: {sceneName}");
+            Logger.Log.Info(this, $"Received LeaveScene data from ID {id}, last scene: {sceneName}");
 
             playerData.CurrentScene = "";
 
@@ -237,7 +237,7 @@ namespace Hkmp.Game.Server {
                 // Send the packet to all clients on the scene that the player left
                 // to indicate that this client has left their scene
                 if (otherPlayerData.CurrentScene.Equals(sceneName)) {
-                    Logger.Get().Info(this, $"Sending leave scene packet to {idPlayerDataPair.Key}");
+                    Logger.Log.Info(this, $"Sending leave scene packet to {idPlayerDataPair.Key}");
 
                     _netServer.GetUpdateManagerForClient(idPlayerDataPair.Key)?.AddPlayerLeaveSceneData(id);
                 }
@@ -246,7 +246,7 @@ namespace Hkmp.Game.Server {
 
         private void OnPlayerUpdate(ushort id, PlayerUpdate playerUpdate) {
             if (!_playerData.TryGetValue(id, out var playerData)) {
-                Logger.Get().Warn(this, $"Received PlayerUpdate data, but player with ID {id} is not in mapping");
+                Logger.Log.Warn(this, $"Received PlayerUpdate data, but player with ID {id} is not in mapping");
                 return;
             }
 
@@ -310,7 +310,7 @@ namespace Hkmp.Game.Server {
 
         private void OnEntityUpdate(ushort id, EntityUpdate entityUpdate) {
             if (!_playerData.TryGetValue(id, out _)) {
-                Logger.Get().Warn(this, $"Received EntityUpdate data, but player with ID {id} is not in mapping");
+                Logger.Log.Warn(this, $"Received EntityUpdate data, but player with ID {id} is not in mapping");
                 return;
             }
 
@@ -350,11 +350,11 @@ namespace Hkmp.Game.Server {
          */
         private void OnPlayerDisconnect(ushort id) {
             if (!_playerData.TryGetValue(id, out _)) {
-                Logger.Get().Warn(this, $"Received PlayerDisconnect data, but player with ID {id} is not in mapping");
+                Logger.Log.Warn(this, $"Received PlayerDisconnect data, but player with ID {id} is not in mapping");
                 return;
             }
             
-            Logger.Get().Info(this, $"Received PlayerDisconnect data from ID: {id}");
+            Logger.Log.Info(this, $"Received PlayerDisconnect data from ID: {id}");
 
             DisconnectPlayer(id);
         }
@@ -389,11 +389,11 @@ namespace Hkmp.Game.Server {
 
         private void OnPlayerDeath(ushort id) {
             if (!_playerData.TryGetValue(id, out _)) {
-                Logger.Get().Warn(this, $"Received PlayerDeath data, but player with ID {id} is not in mapping");
+                Logger.Log.Warn(this, $"Received PlayerDeath data, but player with ID {id} is not in mapping");
                 return;
             }
 
-            Logger.Get().Info(this, $"Received PlayerDeath data from ID {id}");
+            Logger.Log.Info(this, $"Received PlayerDeath data from ID {id}");
 
             SendDataInSameScene(id,
                 otherId => { _netServer.GetUpdateManagerForClient(otherId)?.AddPlayerDeathData(id); });
@@ -401,11 +401,11 @@ namespace Hkmp.Game.Server {
 
         private void OnPlayerTeamUpdate(ushort id, ServerPlayerTeamUpdate teamUpdate) {
             if (!_playerData.TryGetValue(id, out var playerData)) {
-                Logger.Get().Warn(this, $"Received PlayerTeamUpdate data, but player with ID {id} is not in mapping");
+                Logger.Log.Warn(this, $"Received PlayerTeamUpdate data, but player with ID {id} is not in mapping");
                 return;
             }
 
-            Logger.Get().Info(this, $"Received PlayerTeamUpdate data from ID: {id}, new team: {teamUpdate.Team}");
+            Logger.Log.Info(this, $"Received PlayerTeamUpdate data from ID: {id}, new team: {teamUpdate.Team}");
 
             // Update the team in the player data
             playerData.Team = teamUpdate.Team;
@@ -426,16 +426,16 @@ namespace Hkmp.Game.Server {
 
         private void OnPlayerSkinUpdate(ushort id, ServerPlayerSkinUpdate skinUpdate) {
             if (!_playerData.TryGetValue(id, out var playerData)) {
-                Logger.Get().Warn(this, $"Received PlayerSkinUpdate data, but player with ID {id} is not in mapping");
+                Logger.Log.Warn(this, $"Received PlayerSkinUpdate data, but player with ID {id} is not in mapping");
                 return;
             }
 
             if (playerData.SkinId == skinUpdate.SkinId) {
-                Logger.Get().Info(this, $"Received PlayerSkinUpdate data from ID: {id}, but skin was the same");
+                Logger.Log.Info(this, $"Received PlayerSkinUpdate data from ID: {id}, but skin was the same");
                 return;
             }
 
-            Logger.Get().Info(this, $"Received PlayerSkinUpdate data from ID: {id}, new skin ID: {skinUpdate.SkinId}");
+            Logger.Log.Info(this, $"Received PlayerSkinUpdate data from ID: {id}, new skin ID: {skinUpdate.SkinId}");
 
             // Update the skin ID in the player data
             playerData.SkinId = skinUpdate.SkinId;
@@ -460,7 +460,7 @@ namespace Hkmp.Game.Server {
          */
         private void OnClientTimeout(ushort id) {
             if (!_playerData.TryGetValue(id, out _)) {
-                Logger.Get().Warn(this, $"Received timeout from unknown player with ID: {id}");
+                Logger.Log.Warn(this, $"Received timeout from unknown player with ID: {id}");
                 return;
             }
             

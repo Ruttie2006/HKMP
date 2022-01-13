@@ -1,4 +1,4 @@
-﻿namespace Hkmp.Networking.Packet.Data {
+namespace Hkmp.Networking.Packet.Data {
     public class GameSettingsUpdate : IPacketData {
         // TODO: optimize this by only sending the values that actually changed
         
@@ -20,7 +20,7 @@
                 } else if (prop.PropertyType == typeof(byte)) {
                     packet.Write((byte) prop.GetValue(GameSettings, null));
                 } else {
-                    Logger.Get().Warn(this, $"No write handler for property type: {prop.GetType()}");
+                    Logger.Log.Warn(this, $"No write handler for property type: {prop.GetType()}");
                 }
             }
         }
@@ -40,7 +40,7 @@
                 } else if (prop.PropertyType == typeof(byte)) {
                     prop.SetValue(GameSettings, packet.ReadByte(), null);
                 } else {
-                    Logger.Get().Warn(this, $"No read handler for property type: {prop.GetType()}");
+                    Logger.Log.Warn(this, $"No read handler for property type: {prop.GetType()}");
                 }
             }
         }

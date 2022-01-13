@@ -10,7 +10,7 @@ using Version = Hkmp.Version;
 namespace HkmpServer {
     internal class HkmpServer {
         public static void Main(string[] args) {
-            Logger.SetLogger(new ConsoleLogger());
+            Logger.Log = new ConsoleLogger();
 
             var hkmpServer = new HkmpServer();
 
@@ -60,7 +60,7 @@ namespace HkmpServer {
          * Will start the server with the given port and game settings.
          */
         private void StartServer(int port, GameSettings gameSettings) {
-            Logger.Get().Info(this, $"Starting server v{Version.String}");
+            Logger.Log.Info(this, $"Starting server v{Version.String}");
 
             var packetManager = new PacketManager();
 
@@ -75,7 +75,7 @@ namespace HkmpServer {
             }
             catch (Exception ex)
             {
-                Logger.Get().Error(this, ex.ToString());
+                Logger.Log.Error(this, ex.ToString());
             }
             serverManager.Start(port);
         }

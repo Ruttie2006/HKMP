@@ -71,7 +71,7 @@ namespace Hkmp {
          */
         public void StartUdpUpdates() {
             if (_canSendPackets) {
-                Logger.Get().Warn(this, "Tried to start new UDP update thread, while another is already running!");
+                Logger.Log.Warn(this, "Tried to start new UDP update thread, while another is already running!");
                 return;
             }
 
@@ -102,7 +102,7 @@ namespace Hkmp {
          * the current one
          */
         public void StopUdpUpdates() {
-            Logger.Get().Info(this, "Stopping UDP updates, sending last packet");
+            Logger.Log.Info(this, "Stopping UDP updates, sending last packet");
 
             // Send the last packet
             CreateAndSendUpdatePacket();
