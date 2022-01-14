@@ -31,15 +31,14 @@ namespace HKMPServer.HKM
                 {
                     try
                     {
-                        while (Listener.IsListening)
+                        if (Listener.IsListening)
                             Listener.BeginGetContext(OnReceived, Listener);
                     }
                     catch (Exception ex)
                     {
                         Logger.Log.Error(this, ex.ToString());
                     }
-                    //Wait a little to prevent spam
-                    await Task.Delay(100);
+                    await Task.Delay(1000);
                 })
                 {
                     IsBackground = true,
@@ -107,6 +106,13 @@ namespace HKMPServer.HKM
             catch (Exception ex)
             {
                 Logger.Log.Error(this, ex.ToString());
+            }
+            finally
+            {
+                if (Listener.IsListening)
+                    Listener.BeginGetContext(OnReceived, Listener);
+                //Prevent spam
+                await Task.Delay(100);
             }
         }
 
