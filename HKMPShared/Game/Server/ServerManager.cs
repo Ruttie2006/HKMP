@@ -108,9 +108,10 @@ namespace Hkmp.Game.Server {
         }
 
         /// <summary>
-        /// Gets a List of ServerPlayerData containing all the currently connected users.
+        /// Gets a List of ServerPlayerDatas containing all connected users.
         /// </summary>
-        /// <returns>The list of data gotten.</returns>
+        /// <returns>The list of connected users.</returns>
+        [Obsolete("Should be changed cus it won't be in the official api probably")]
         public List<ServerPlayerData> GetPlayerData()
         {
             var players = _playerData.GetCopy().Values;
@@ -119,7 +120,6 @@ namespace Hkmp.Game.Server {
                 list.Add(player);
             return list;
         }
-        
 
         private void OnHelloServer(ushort id, HelloServer helloServer) {
             Logger.Log.Info(this, $"Received HelloServer data from ID {id}");

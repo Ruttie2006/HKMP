@@ -9,6 +9,8 @@ using Hkmp;
 using System.Threading;
 using Hkmp.Game;
 using System.Collections.Generic;
+using System.Net.Sockets;
+using Hkmp.Concurrency;
 
 namespace HKMPServer.HKM
 {
@@ -22,7 +24,7 @@ namespace HKMPServer.HKM
             {
                 Manager = _ServerManager;
                 Listener = new HttpListener();
-                Listener.Prefixes.Add(@"http://192.168.1.65:5051/");
+                Listener.Prefixes.Add($@"http://{GetIP()}:5051/");
                 Listener.Start();
 
                 new Thread(async () =>
@@ -82,6 +84,8 @@ namespace HKMPServer.HKM
                     if (context.Response.ContentEncoding == null)
                         context.Response.ContentEncoding = Encoding.Unicode;
                     var buffer = context.Response.ContentEncoding.GetBytes(ToSend);
+                    if (!buffer.Any())
+                        buffer = context.Response.ContentEncoding.GetBytes("null");
                     context.Response.OutputStream.Write(buffer, 0, buffer.Count() - 1);
                     context.Response.Close();
                 }
@@ -105,7 +109,30 @@ namespace HKMPServer.HKM
                 Logger.Log.Error(this, ex.ToString());
             }
         }
+
+        private List<ServerPlayerData> GetPlayerData()
+        {
+            var info = (ConcurrentDictionary<ushort, ServerPlayerData>)typeof(ServerManager).GetField("_playerData").GetValue(this);
+            var players = info.GetCopy().Values;
+            var list = new List<ServerPlayerData>();
+            foreach (var player in players)
+                list.Add(player);
+            return list;
+        }
+
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+
+        public static string GetIP()
+        {
+            if (!System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+                throw new Exception("Your device is not connected to a network connection!");
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                    return ip.ToString();
+            throw new Exception("No network adapters with an IPv4 address in the system!");
+        }
+
         private class SendableServerUserData
         {
             public string Username { get; set; }
