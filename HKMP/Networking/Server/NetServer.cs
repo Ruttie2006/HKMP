@@ -8,7 +8,6 @@ using System.Threading;
 using Hkmp.Api.Server;
 using Hkmp.Api.Server.Networking;
 using Hkmp.Logging;
-using Hkmp.Networking.Client;
 using Hkmp.Networking.Packet;
 using Hkmp.Networking.Packet.Data;
 

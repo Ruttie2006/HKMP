@@ -1,12 +1,12 @@
 using System;
-using JetBrains.Annotations;
+
 
 namespace Hkmp.Api.Eventing {
     /// <summary>
     /// A publish-subscribe style event built off <see cref="EventBase"/> with a typed payload.
     /// </summary>
     /// <typeparam name="TPayload">The type of the payload.</typeparam>
-    [PublicAPI]
+    
     public class PubSubEvent<TPayload> : EventBase {
         /// <summary>
         /// Subscribes to the event.

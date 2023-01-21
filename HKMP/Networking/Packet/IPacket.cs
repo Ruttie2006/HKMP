@@ -1,12 +1,12 @@
 using System;
 using Hkmp.Math;
-using JetBrains.Annotations;
+
 
 namespace Hkmp.Networking.Packet {
     /// <summary>
     /// Packet for reading and writing raw values.
     /// </summary>
-    [PublicAPI]
+    
     public interface IPacket {
         #region Writing integral numeric types
 
@@ -34,11 +34,11 @@ namespace Hkmp.Networking.Packet {
         /// <param name="value">The unsigned long value.</param>
         void Write(ulong value);
 
-        /// <summary>
+        /*/// <summary>
         /// Write a signed byte to the packet.
         /// </summary>
         /// <param name="value">The signed byte value.</param>
-        void Write(sbyte value);
+        void Write(sbyte value);*/
 
         /// <summary>
         /// Write a signed short (2 bytes) to the packet.

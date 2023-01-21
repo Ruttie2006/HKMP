@@ -126,10 +126,10 @@ namespace Hkmp.Networking.Packet {
             _buffer.AddRange(BitConverter.GetBytes(value));
         }
 
-        /// <inheritdoc />
+        /*/// <inheritdoc />
         public void Write(sbyte value) {
-            _buffer.AddRange(BitConverter.GetBytes(value));
-        }
+            _buffer.AddRange(new byte[] { value });
+        }*/
 
         /// <inheritdoc />
         public void Write(short value) {
