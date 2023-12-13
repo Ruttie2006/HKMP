@@ -1,0 +1,1112 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/HKMP/HKMP/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "335ZFe4AJYOX67JAYn8fv9ojkwvRIVYJ3iUFaUGbxY8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Addon.Addon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Addon.Addon.html",
+          "hash": "1W8Vmq0lLahZrA534MFydv23mU6VKbtvNJ6MxGGD9Iw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Addon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Addon.html",
+          "hash": "m8TDZfLo0g0Al2WFE8Di7u3Ls//XFLtXbvWnhsd2qEQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.ClientAddon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.ClientAddon.html",
+          "hash": "m9GWg+UosniN6NBytXe6llsU11mgUm6YrZagSB24XTU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.IChatBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.IChatBox.html",
+          "hash": "SLDwlTx3uKYbwkZnzf341idXm6WcWxYeiRcQVKZ6r9Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.IClientApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.IClientApi.html",
+          "hash": "Z3DXxmTAoncMWQwo58RV8Yr0EMlet3afzhsUMxRosq8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.IClientManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.IClientManager.html",
+          "hash": "qg2AQHomCJqJnWGA11BDhTZ1ARt8KOBknwGoUNILvTk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.IClientPlayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.IClientPlayer.html",
+          "hash": "PNR0/82tkMfFNcFPfLW1n18j/uQ/CEZ3woiPVaBExUg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.IMapManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.IMapManager.html",
+          "hash": "thukW7dI8XoAG1KnDmPT+i/EpDHopKsDfyulK6T1AP0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.IPlayerMapEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.IPlayerMapEntry.html",
+          "hash": "QJdkCCQZZ8V4duLA9RsNuH0Ie6Zy+LJyq7pwVk3yPc0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.IUiManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.IUiManager.html",
+          "hash": "DO3Ikr6JyXj1o5GZGBkb3f6m6r5vJ2pQs27jb/sdV0M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.Networking.IClientAddonNetworkReceiver-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.Networking.IClientAddonNetworkReceiver-1.html",
+          "hash": "Ifhwg9LyFEnvFjZ7kggzd5QHNja8PGg+ydRJDo2Zjps="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.Networking.IClientAddonNetworkSender-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.Networking.IClientAddonNetworkSender-1.html",
+          "hash": "pi+MU+by1gLSMz3FVSLIvqYGpS4v30cfApMLzF+NlQ0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.Networking.INetClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.Networking.INetClient.html",
+          "hash": "FLchjJe3SOyojq98j4Hdvb/oWnpVLNfhluD2zXpIA7w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.Networking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.Networking.html",
+          "hash": "WjLOE+hHxzhwxdLJdFmHRV+q82W+zf7Px8PS/qhpTP0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.TogglableClientAddon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.TogglableClientAddon.html",
+          "hash": "uq2znvNmJK/3PsdEcR9aFzNVJ8HrABt3DAbj2XMgn/0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Client.html",
+          "hash": "SHAVWhrs7+cdzRbpTbmwn/nskU2wheKN3o5mDAEj+mc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Command.Client.IClientCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Command.Client.IClientCommand.html",
+          "hash": "yMqv7Rdvle1nsHpv3UuQtFHmX1RO8s1Rr+unpj5j+9g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Command.Client.IClientCommandManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Command.Client.IClientCommandManager.html",
+          "hash": "5nbJvkkq2dTT5kMVxsy5uuSY04zpU3IwDmTya9tqez4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Command.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Command.Client.html",
+          "hash": "A3T1HJXfkPdMpRgJhbjLGCzXh5E115kaRX8jEuGDZKY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Command.ICommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Command.ICommand.html",
+          "hash": "WousHalqCVufKeZ5/psr/QDWozBklAn8VeslkvCCSaA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Command.ICommandManager-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Command.ICommandManager-1.html",
+          "hash": "UXcMlqbDlybZpRy65fAO3BFLyFp8cJcCYb5n+TYwbgc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Command.IPlayerCommandSender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Command.IPlayerCommandSender.html",
+          "hash": "CGR8kgO5YIT5tr3FnkkU8o8wMlzEu4yelqyTctM9pcQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Command.Server.CommandSenderType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Command.Server.CommandSenderType.html",
+          "hash": "s68NYoLI0Uv8/vjGvRIMrgI+KbGffZMS9f+A1nnAq7Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Command.Server.ICommandSender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Command.Server.ICommandSender.html",
+          "hash": "rjaPkleSjGhilq+90/+LX9WLtIP8PqtbM9XMlVhB1Bk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Command.Server.IServerCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Command.Server.IServerCommand.html",
+          "hash": "RypDyX5P3Ym6kSjrK2DB8mYXopxLcR0YDUPUwtoa6CM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Command.Server.IServerCommandManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Command.Server.IServerCommandManager.html",
+          "hash": "SdvgLRMr32P2lI2EoPIfi8CrMyAmasaSKA4mreeeTVc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Command.Server.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Command.Server.html",
+          "hash": "O/Dgp2a0gYHu6Xgjx3SVKHBAe14Roy1w8qEgDP5+sKo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Command.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Command.html",
+          "hash": "w8S3ut9ZdM8SfASIb1rq8jwxr6Qdh9IxB6vslT3V76E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Eventing.Cancellable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Eventing.Cancellable.html",
+          "hash": "Wj1iSF/T3f87P6kLwp1cRkRKK5P4kXspi6nbHhPPo+8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Eventing.IEventAggregator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Eventing.IEventAggregator.html",
+          "hash": "A2avc9wGazUmt5lBfICAgSVRcNuJhIKHUD5J9dgKGjo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Eventing.InterEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Eventing.InterEvent.html",
+          "hash": "xiqnQT5mCtlpv9g9KRlPNKF1jBnefr3ux0L4x9bpbyY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Eventing.PubSubEvent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Eventing.PubSubEvent-1.html",
+          "hash": "+OentKe5+8JhHnfRZ6ZDlPW3kLtgVj2ajwQtXw0Cz0I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Eventing.ServerEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Eventing.ServerEvent.html",
+          "hash": "A7naS3FKFthERd24XtAk0s0kxuI3y/KlV4wtF5UFfd0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Eventing.ServerEvents.IPlayerChatEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Eventing.ServerEvents.IPlayerChatEvent.html",
+          "hash": "SZez1tE+pHNVnpWf24EPDzxIAdAnor7aHiP4ntY0eao="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Eventing.ServerEvents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Eventing.ServerEvents.html",
+          "hash": "0N8GSiw9siHNxUPyOP4CMMiYvVk9n5zTJLnmM0FURcw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Eventing.SubscriptionToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Eventing.SubscriptionToken.html",
+          "hash": "4bMzNCi0fDXBfnmFhVhPd79XvuvN9GPJCYuG6jykd4g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Eventing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Eventing.html",
+          "hash": "m9TyrYh0kFd0Ec8is6tqshpNiM27UBnqZ8NdUu3/vQo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Server.IServerApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Server.IServerApi.html",
+          "hash": "KPzvSzlVl0s1ZDKgqTWb+VYnCmLAp+1lXuD7O7vQiGI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Server.IServerManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Server.IServerManager.html",
+          "hash": "CH8BzTjxdjwOmKcIhj7tHDXJA2++ggYEfGXXargyWBA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Server.IServerPlayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Server.IServerPlayer.html",
+          "hash": "TrOyir/tr1iTVkM7RmPBqlYPVHmQFe4mukPa/YS48iQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Server.IServerSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Server.IServerSettings.html",
+          "hash": "lkco4rYFlL4N1bZTs/UNN2Wd9o4N43UH2UXBDmgt4jw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Server.Networking.INetServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Server.Networking.INetServer.html",
+          "hash": "++E71+tfeni26DFALrS3ieZUq6IDz7wYeWjQXoal78g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Server.Networking.IServerAddonNetworkReceiver-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Server.Networking.IServerAddonNetworkReceiver-1.html",
+          "hash": "PJvpVCLOH/A4DfL7hP8UP3x3+LxH7kFXj59bX0UWqK4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Server.Networking.IServerAddonNetworkSender-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Server.Networking.IServerAddonNetworkSender-1.html",
+          "hash": "KidN8PzsgymNn0xeh+CvSjLHkWNl8McSvi7QSmpvBgg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Server.Networking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Server.Networking.html",
+          "hash": "mFNd+eWJWMQCn0gLOjAscNgUtBm0Q0fVMYO6Cju+RRY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Server.ServerAddon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Server.ServerAddon.html",
+          "hash": "CTxxDJhLabdpMX+0m1ayD5mMJ+SackAsndFUcmo754A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Api.Server.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Api.Server.html",
+          "hash": "8JPtWV0RZdMIVY/vLyYKzp6o2RMe8L31C5j0cSUP7Rc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Collection.BiLookup-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Collection.BiLookup-2.html",
+          "hash": "roU7desq5kYw49ZGPPY3njzNIw54S1uyyOkVBvvBvC8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Collection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Collection.html",
+          "hash": "IjUksNjwu1P2AqIGlW1+RJObj8baqR81HZvWeaq94D4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Concurrency.ConcurrentFixedSizeQueue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Concurrency.ConcurrentFixedSizeQueue-1.html",
+          "hash": "+jK0tGR3IIS6AG9rGqf+9hVP5cWi6e8iFyKfQER0ilU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Concurrency.ConcurrentList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Concurrency.ConcurrentList-1.html",
+          "hash": "KbgjwbknsjaIWIN7/IBlMi0lmYiesDCJclE21lvtTO4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Concurrency.ConcurrentStopwatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Concurrency.ConcurrentStopwatch.html",
+          "hash": "NI+VTTmYVSbhxWIX5dBSYS7j1YzCNcqHUENudEXn6Z0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Concurrency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Concurrency.html",
+          "hash": "Jjpx15nF6889NGwAUu9wA95FeihlJJuNZtMojP7m/6M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Game.Settings.ServerSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Game.Settings.ServerSettings.html",
+          "hash": "6kKxMXGX8qM4doXubEYYZ6dj2EGNnFciK7gWwLsNodM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Game.Settings.SettingAliasAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Game.Settings.SettingAliasAttribute.html",
+          "hash": "sAKavKtghDVWwXhytzJD4YDh0J+iI4WZhYZIkay32F4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Game.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Game.Settings.html",
+          "hash": "0CRvw7fOVWXkDxvjWIV293oY/hN7CgOXsX8Ua42eEV0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Game.Team.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Game.Team.html",
+          "hash": "1tWN5AtrOMVtXpAQ6dR+DI8ZfLEiXAcjSwRLuL3tBp8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Game.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Game.html",
+          "hash": "t65xQiqisqOUXpQpBB2bv1K7L0a1SbkCyUe1NdX6l+4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Logging.BaseLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Logging.BaseLogger.html",
+          "hash": "W6cICC9m2gi1aqzGj7WTjwwyGEoyAvpFsKNUE4Jts4Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Logging.ILogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Logging.ILogger.html",
+          "hash": "maPL4B8WnF+81EOiFk0U2+wcgEDE0KlnteBxgp39zq0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Logging.html",
+          "hash": "QNWy4XrNuSDLObNsQhozuuCWpVwy0qzMWIgOsF9NdeU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Math.Vector2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Math.Vector2.html",
+          "hash": "lpT3j7JsFDakzZXtCxKtMk6mKmIf0FgsSKdfN5a6XbM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Math.Vector3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Math.Vector3.html",
+          "hash": "YTRCYqZEvdENEd/DWxl/0+r2O+8cBYbpkKiqXhDAClw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Math.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Math.html",
+          "hash": "Vq/bez3wWTTEWIRPsAStG13NzPMRgxcC0CIwqqT0VZQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Networking.Packet.Data.DisconnectReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Networking.Packet.Data.DisconnectReason.html",
+          "hash": "EuX0EYzOxc03Kj9jDyI7fk8IN59i/PATgG/H1nchmgw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Networking.Packet.Data.EmptyData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Networking.Packet.Data.EmptyData.html",
+          "hash": "EERo9Op3uHJItY/ZCSZVbBxQYmxjOay2Vejhh+54taM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Networking.Packet.Data.PacketDataCollection-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Networking.Packet.Data.PacketDataCollection-1.html",
+          "hash": "RX11BE8UBNub/hJM8ZRsyWqOxqpxpL7PE0BgbtyfBZ0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Networking.Packet.Data.RawPacketDataCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Networking.Packet.Data.RawPacketDataCollection.html",
+          "hash": "lyF0HLUyF5nz8UdgE6krpFeZUKm/9KZY0j2RRD6qhXo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Networking.Packet.Data.ReliableEmptyData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Networking.Packet.Data.ReliableEmptyData.html",
+          "hash": "hhbbvffhQaUtJC7p88eOAfG2+QOfIxxn2o/T2ubJwds="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Networking.Packet.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Networking.Packet.Data.html",
+          "hash": "QaFm/RY2z7Wy88wPZHTfQwpTx1MBavYBvpe+WOmtjhc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Networking.Packet.GenericClientPacketHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Networking.Packet.GenericClientPacketHandler-1.html",
+          "hash": "kKnsq601p67ekPSJqJNUzYbL2OGe+au+sIrvsud1668="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Networking.Packet.GenericServerPacketHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Networking.Packet.GenericServerPacketHandler-1.html",
+          "hash": "chBEB6w/UymNB9QNw8yY6ZA7WLqOpikxeqWvhUY4KbE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Networking.Packet.IPacket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Networking.Packet.IPacket.html",
+          "hash": "yEVqLK1+pBCR19qfb0PSzYUsIh7+EoT4Pl0jdOjeTsg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Networking.Packet.IPacketData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Networking.Packet.IPacketData.html",
+          "hash": "aUBgju2D2MwuuDC9d6cec4vewIA9uhy2Lqk0AcBwoPY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Networking.Packet.ServerPacketId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Networking.Packet.ServerPacketId.html",
+          "hash": "zJn0MKi4sx05wKgMAiZgXRMa8LLRG90yKvq74H6fHYg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Networking.Packet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Networking.Packet.html",
+          "hash": "jetuBgNO+SMpe7QXsQDzQpHy8bEmGdgUQFvksq4V+Nw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Ui.Component.IComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Ui.Component.IComponent.html",
+          "hash": "kK1isSxfLmvePmJIh+btjUMz/aqR2eE9I0g3SvyGGVE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Ui.Component.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Ui.Component.html",
+          "hash": "E7OKlAMQfl80B62AkqeGTEkuoa3jVWKM8aDghm7Zcjk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Ui.Resources.MultiStateSprite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Ui.Resources.MultiStateSprite.html",
+          "hash": "PrVmBPvr96cOSKUo26G82qieLyXLC41yM0SGpvHA6ME="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Ui.Resources.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Ui.Resources.html",
+          "hash": "1qKBzxKXZZanr6ka+TERN2hjusFWmVP5sB/EeHYobbI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Util.FsmUtilExt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Util.FsmUtilExt.html",
+          "hash": "eYxqtyZsZDIXSUVXHhmEpP1fi0GrhuyjnomUMEB7pHQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "doc/Hkmp.Util.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Hkmp.Util.html",
+          "hash": "shjXAZWxqe1Z2HURzqk4WGW+lI3OV6qnZO1X9DaXHKs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/index.html",
+          "hash": "MfnH3EXYT+J+TGmMyPtEP/8x+RUUYJIpJYPn4z84z+M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "doc/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/toc.html",
+          "hash": "738EQudKuLARpP6rDNeu9pL7WrVallP72UuvCE2zYZY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "zMOb4820CCWEJPkjLz87htdNMG+A2e2G71k2QyH82TY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Iz2lOsQbCeJxBuIbQC4wuqY0jazw3DJgNtG3Ch3sReg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 82,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
