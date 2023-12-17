@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Hkmp.Game;
 using Hkmp.Math;
 
@@ -51,7 +51,7 @@ internal class ClientPlayerEnterScene : GenericClientData {
         packet.Write(Id);
         packet.Write(Username);
 
-        packet.Write(Position);
+        packet.Write(Position ?? Vector2.Zero); // Attempt to prevent crashes happening recently
         packet.Write(Scale);
         packet.Write((byte) Team);
         packet.Write(SkinId);

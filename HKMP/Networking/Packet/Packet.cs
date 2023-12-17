@@ -51,6 +51,8 @@ internal class Packet : IPacket {
     /// </summary>
     /// <param name="data">The byte to set this packet to.</param>
     private void SetBytes(byte[] data) {
+        if (CheckNull(data))
+            return;
         _buffer.AddRange(data);
         _readableBuffer = _buffer.ToArray();
     }
@@ -78,6 +80,8 @@ internal class Packet : IPacket {
     /// </summary>
     /// <param name="values">A byte array of values to write.</param>
     public void Write(byte[] values) {
+        if (CheckNull(values))
+            return;
         _buffer.AddRange(values);
     }
 
@@ -174,6 +178,8 @@ internal class Packet : IPacket {
 
     /// <inheritdoc />
     public void Write(string value) {
+        if (CheckNull(value))
+            return;
         // Encode the string into a byte array with UTF-8
         var byteEncodedString = Encoding.UTF8.GetBytes(value);
 
@@ -189,6 +195,8 @@ internal class Packet : IPacket {
 
     /// <inheritdoc />
     public void Write(Vector2 value) {
+        if (CheckNull(value))
+            return;
         Write(value.X);
         Write(value.Y);
     }
@@ -405,4 +413,18 @@ internal class Packet : IPacket {
     #endregion
 
     #endregion
+
+    /// <summary>
+    /// Indicates whether or not a packet is null, and returns <see langword="true"/> if it is.
+    /// </summary>
+    /// <typeparam name="T">The type of the value to check.</typeparam>
+    /// <param name="value">The value to check.</param>
+    /// <returns>Whether or not it is null.</returns>
+    private bool CheckNull<T>(T value) {
+        if (value is null) {
+            Logger.Warn($"Attempted to send null packet of type: '{value.GetType().FullName}'.");
+            return true;
+        }
+        return false;
+    }
 }
