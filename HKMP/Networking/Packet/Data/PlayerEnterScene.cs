@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Hkmp.Game;
+using Hkmp.Logging;
 using Hkmp.Math;
 
 namespace Hkmp.Networking.Packet.Data;
@@ -13,10 +14,18 @@ internal class ClientPlayerEnterScene : GenericClientData {
     /// </summary>
     public string Username { get; set; }
 
+    private Vector2 _pos = Vector2.Zero;
     /// <summary>
     /// The position of the player.
     /// </summary>
-    public Vector2 Position { get; set; }
+    public Vector2 Position {
+        get => _pos;
+        set {
+            if (null == value)
+                Logger.Warn($"Attempt to set a null value to Position of client id {Id} ({Username ?? "Unknown"}).");
+            _pos = value;
+        }
+    }
 
     /// <summary>
     /// The scale of the player.
@@ -51,6 +60,12 @@ internal class ClientPlayerEnterScene : GenericClientData {
         packet.Write(Id);
         packet.Write(Username);
 
+        if (Position == null)
+            Logger.Warn($$"""
+            Encountered null position.
+            ID: {{Id}}
+            Username: {{Username}}
+            """);
         packet.Write(Position ?? Vector2.Zero); // Attempt to prevent crashes happening recently
         packet.Write(Scale);
         packet.Write((byte) Team);
